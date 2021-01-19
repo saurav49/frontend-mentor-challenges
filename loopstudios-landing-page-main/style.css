@@ -1,0 +1,248 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+
+nav {
+  background-image: url("./images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-rows: 0.3fr 0.55fr;
+  grid-template-areas:
+    "logoImage ulDiv"
+    "header .";
+  height: 600px;
+  row-gap: 1rem;
+}
+
+.logo-image {
+  grid-area: logoImage;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image img {
+  width: 100%;
+}
+
+ul {
+  grid-area: ulDiv;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-self: flex-end;
+  font-family: Alata, "sans-serif";
+}
+
+li {
+  margin: 0px 17px;
+}
+
+.header {
+  grid-area: header;
+  border: 2px solid hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+  font-family: Josefin Sans, "sans-serif";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding: 30px;
+}
+
+.header h1 {
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+a::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  left: 12px;
+  bottom: -15px;
+  opacity: 0;
+}
+
+a:hover::before {
+  bottom: -10px;
+  opacity: 1;
+}
+
+.flex {
+  display: flex;
+  padding: 160px 0px;
+  align-items: center;
+  position: relative;
+}
+
+.hero-description {
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 100px 0px 0px 100px;
+}
+
+.hero-description h2 {
+  color: rgb(36, 36, 36);
+  font-family: Josefin Sans, "sans-serif";
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.hero-description p {
+  font-family: Alata, "sans-serif";
+  color: hsl(0, 0%, 55%);
+  font-size: 15px;
+}
+
+.creations {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  margin-top: -100px;
+  margin-bottom: -50px;
+  align-items: center;
+}
+
+.creations h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: Josefin Sans, "sans-serif";
+}
+
+.btn {
+  width: 160px;
+  height: 40px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-family: Alata, "sans-serif";
+  font-size: 1rem;
+  letter-spacing: 4px;
+  border-radius: 2px;
+  border: 2px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.btn:hover {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-section > div {
+  position: relative;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+}
+
+.grid-section div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 6px;
+  bottom: 5px;
+  opacity: 0.1;
+}
+
+.grid-section div:hover {
+  background-color: hsl(0, 0%, 100%);
+  opacity: 0.2;
+  color: black;
+}
+
+.grid-section h3 {
+  font-family: Josefin Sans, "sans-serif";
+  font-weight: 300;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 2rem;
+  padding: 0px 50px 20px 20px;
+}
+
+footer {
+  background-color: hsl(0, 0%, 0%);
+  margin-top: 183px;
+  color: hsl(0, 0%, 100%);
+}
+.flex-footer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.subflex-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subflex-footer ul {
+  margin-left: -18px;
+}
+
+.social-media::before {
+  width: 100%;
+  left: 0;
+}
+
+small {
+  font-family: Alata, "sans-serif";
+  color: hsl(0, 0%, 55%);
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+}
