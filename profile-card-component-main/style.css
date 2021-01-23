@@ -147,6 +147,16 @@ span {
   }
 }
 
+@media screen and (max-width: 280px) {
+  .top {
+    height: 10px;
+  }
+
+  .bottom {
+    height: 420px;
+  }
+}
+
 /* utilities */
 .flex {
   display: flex;
