@@ -5,12 +5,256 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #000 !important;
+  /* background: #000 !important;
   color: #0f0 !important;
-  outline: solid #f00 1px !important;
+  outline: solid #f00 1px !important; */
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+/* utilities */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 141px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+  font-family: "Alata", "sans-serif";
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Josefin Sans", "sans-serif";
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 10px 40px;
+  text-transform: uppercase;
+  border: 2px solid var(--Black);
+  color: var(--Black);
+  background-color: var(--White);
+  letter-spacing: 5px;
+  font-family: "Alata", "sans-serif";
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--White);
+  background-color: var(--Black);
+}
+
+/* header */
+header {
+  background-image: url("./images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
 }
 
 nav {
+  padding: 53px 0px;
+}
+
+nav li {
+  margin-left: 30px;
+}
+
+a::before {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -15px;
+  background-color: var(--White);
+  left: 30%;
+  width: 20px;
+  opacity: 0;
+  transition: 300ms;
+}
+a:hover::before {
+  bottom: -10px;
+  opacity: 1;
+}
+
+.header-box {
+  margin: 6.4% 0px 10px 0px;
+  border: 2px solid var(--White);
+  max-width: 610px;
+  padding: 25px;
+}
+
+.header-box h1 {
+  color: var(--White);
+  font-size: 4.2rem;
+  font-weight: 300;
+}
+
+/* interactive */
+.interactive .flex {
+  padding: 160px 0px;
+}
+
+.hero-image {
+  width: 100%;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  left: 55%;
+  top: 49%;
+  background-color: var(--White);
+  color: var(--Black);
+  padding: 63px 0px 0px 73px;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.hero-text p {
+  font-family: "Alata", "sans-serif";
+  font-size: 0.88rem;
+  color: var(--Dark-Gray);
+}
+
+/* creations */
+.creations .flex {
+  flex-direction: column;
+}
+
+.creations .flex > div {
+  width: 100%;
+}
+
+.creation-see-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.creation-see-all h2 {
+  font-size: 2.7rem;
+  font-weight: 300;
+}
+
+.grid > div {
+  position: relative;
+  cursor: pointer;
+}
+
+/* .overlay {
+  position: relative;
+  background-color: var(--White);
+  opacity: 0.5;
+} */
+
+.grid > div:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--White);
+  color: var(--Black);
+  opacity: 0.6;
+}
+
+.grid > div > h3 {
+  position: absolute;
+  bottom: 0;
+  color: var(--White);
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0px 10px 35px 35px;
+  width: 100%;
+}
+
+.grid > div:hover > h3 {
+  color: var(--Black);
+}
+
+.grid > div > img {
+  width: 100%;
+}
+
+/* footer */
+.footer {
+  background-color: var(--Black);
+  min-height: 200px;
+  margin-top: 170px;
+}
+
+.footer .flex {
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+}
+
+.footer .flex div {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer .flex div:first-child ul li {
+  padding-left: 20px;
+}
+
+.footer .flex div:nth-child(2) ul li {
+  padding-right: 20px;
+}
+
+/* .footer .flex .flex .flex {
+
+} */
+
+small {
+  color: var(--Very-Dark-Gray);
+  text-align: end;
+  font-family: "Alata", "sans-serif";
+  font-size: 0.86rem;
+}
+/* nav {
   background-image: url("./images/desktop/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -245,4 +489,4 @@ small {
 }
 
 @media screen and (max-width: 768px) {
-}
+} */
