@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* utilites */
+.bold {
+  font-weight: 700;
+}
+
+body {
+  font-family: "Spartan", "sans-serif";
+  width: 100%;
+  min-height: 100vh;
+  color: var(--Very-Dark-Magenta);
+  position: relative;
+}
+
+.top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+}
+
+.bottom-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 90%;
+}
+
+.flex {
+  min-height: 100vh;
+  padding: 70px 100px 30px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+/* .upper-card */
+.upper-card {
+  display: grid;
+  grid-template-columns: 40% 58%;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.user-info h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.user-info p {
+  line-height: 27px;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.rating-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--Light-Grayish-Magenta);
+  padding: 10px 30px;
+  margin: 5px 0px;
+  width: 70%;
+  height: 25%;
+  border-radius: 10px;
+}
+
+.rating-card:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+.rating-card:nth-child(2) {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 2;
+}
+
+.rating-card:nth-child(3) {
+  position: absolute;
+  top: 62%;
+  right: 0;
+  z-index: 2;
+}
+
+.rating-card > div {
+  width: 45%;
+  margin-right: 15px;
+}
+
+.rating-card div img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* testimonial-card */
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  width: 100%;
+  margin-top: 74px;
+}
+
+.cards {
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 1rem;
+  color: #ffffff;
+  padding: 41px 31px;
+  height: 325px;
+}
+
+.cards:nth-child(1) {
+  margin-right: 20px;
+}
+
+.cards:nth-child(2) {
+  margin-right: 20px;
+}
+
+.people-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.people-info img {
+  width: 16%;
+  border-radius: 50%;
+}
+
+.people-info div {
+  margin-left: 25px;
+}
+
+.colorChange {
+  color: var(--Soft-Pink);
+}
+
+.cards p {
+  line-height: 30px;
+}
+
+/* media-queries */
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 15px;
+  }
+
+  .user-info h1 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+  }
+
+  .top-image-div {
+    position: absolute;
+    content: url("./images/bg-pattern-top-mobile.svg");
+    top: 0;
+    left: 0;
+  }
+
+  .bottom-image-div {
+    position: absolute;
+    content: url("./images/bg-pattern-bottom-mobile.svg");
+    bottom: 0;
+    right: 0;
+  }
+
+  .upper-card {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    height: 200%;
+    gap: 70px;
+  }
+
+  .user-info {
+    height: 50%;
+  }
+
+  .rating-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating-card:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 20%;
+  }
+
+  .rating-card:nth-child(2) {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 2;
+  }
+
+  .rating-card:nth-child(3) {
+    position: absolute;
+    top: 62%;
+    left: 20%;
+    z-index: 2;
+  }
+}
