@@ -44,11 +44,10 @@ body {
 
 .flex {
   min-height: 100vh;
-  padding: 70px 100px 30px 100px;
+  padding: 50px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 /* .upper-card */
@@ -58,6 +57,9 @@ body {
   grid-template-rows: 1fr;
   gap: 20px;
   width: 100%;
+  height: 40vh;
+  padding: 3% 0px 0px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .user-info h1 {
@@ -83,9 +85,8 @@ body {
   justify-content: space-around;
   background-color: var(--Light-Grayish-Magenta);
   padding: 10px 30px;
-  margin: 5px 0px;
   width: 70%;
-  height: 25%;
+  height: 20%;
   border-radius: 10px;
 }
 
@@ -123,11 +124,12 @@ body {
 /* testimonial-card */
 .testimonial-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  height: 50%;
   width: 100%;
   margin-top: 74px;
+  height: 50vh;
+  position: relative;
 }
 
 .cards {
@@ -135,7 +137,7 @@ body {
   border-radius: 1rem;
   color: #ffffff;
   padding: 41px 31px;
-  height: 325px;
+  height: 350px;
 }
 
 .cards:nth-child(1) {
@@ -143,7 +145,11 @@ body {
 }
 
 .cards:nth-child(2) {
-  margin-right: 20px;
+  margin: 30px 20px 0px 0px;
+}
+
+.cards:nth-child(3) {
+  margin-top: 60px;
 }
 
 .people-info {
@@ -166,18 +172,35 @@ body {
 }
 
 .cards p {
+  font-size: 1.2rem;
   line-height: 30px;
 }
 
 /* media-queries */
 @media screen and (max-width: 900px) {
+  /* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
   body {
+    min-height: 100vh;
     font-size: 15px;
   }
 
-  .user-info h1 {
-    font-size: 2.3rem;
-    margin-bottom: 5px;
+  .flex {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  .top-image {
+    display: none;
+  }
+
+  .bottom-image {
+    display: none;
   }
 
   .top-image-div {
@@ -185,6 +208,7 @@ body {
     content: url("./images/bg-pattern-top-mobile.svg");
     top: 0;
     left: 0;
+    width: 100%;
   }
 
   .bottom-image-div {
@@ -198,36 +222,89 @@ body {
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-rows: 40% 60%;
-    height: 200%;
-    gap: 70px;
+    height: 100vh;
   }
 
   .user-info {
-    height: 50%;
+    height: 100%;
+  }
+
+  .user-info h1 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+  }
+
+  .user-info p {
+    font-size: 15px;
+  }
+
+  .ratings {
+    margin: 40px 0px 0px 0px;
+    height: 100%;
   }
 
   .rating-card {
     display: flex;
     flex-direction: column;
+    width: 85%;
+    padding: 0px;
+  }
+
+  .rating-card > div {
+    width: 100%;
+  }
+
+  .rating-card p {
+    font-size: 15px;
   }
 
   .rating-card:nth-child(1) {
     position: absolute;
     top: 0;
-    left: 20%;
+    left: 8%;
   }
 
   .rating-card:nth-child(2) {
     position: absolute;
     top: 30%;
-    left: 20%;
+    left: 8%;
     z-index: 2;
   }
 
   .rating-card:nth-child(3) {
     position: absolute;
     top: 62%;
-    left: 20%;
+    left: 8%;
     z-index: 2;
+  }
+
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 45px 0px 0px 0px;
+  }
+
+  .cards {
+    width: 85%;
+    margin: 0px;
+    height: 70%;
+  }
+
+  .cards:nth-child(1) {
+    margin: 0px;
+  }
+
+  .cards:nth-child(2) {
+    margin: 10px 0px 0px 0px;
+  }
+
+  .cards:nth-child(3) {
+    margin: 10px 0px 0px 0px;
+  }
+
+  .cards p {
+    font-size: 15px;
   }
 }
