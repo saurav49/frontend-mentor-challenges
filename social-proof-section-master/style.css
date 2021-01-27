@@ -31,7 +31,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 35%;
 }
 
 .bottom-image {
@@ -84,8 +84,9 @@ body {
   background-color: var(--Light-Grayish-Magenta);
   padding: 10px 30px;
   width: 70%;
-  height: 20%;
+  height: 25%;
   border-radius: 10px;
+  font-size: 13px;
 }
 
 .rating-card:nth-child(1) {
